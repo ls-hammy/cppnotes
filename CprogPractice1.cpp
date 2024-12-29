@@ -3,6 +3,7 @@
 #include<string>
 #include<iomanip>
 #include<cstring>
+#include <cctype>
 using namespace std;
 //int main()
 //{
@@ -742,5 +743,170 @@ using namespace std;
 //    cin >> limit;
 //    cout << "Prime numbers up to " << limit << " are: ";
 //    generatePrimes(limit);
+//    return 0;
+//}
+
+
+/*Program for Bubble Sorting*/
+
+
+//void bubbleSort(int arr[], int n) {
+//    for (int i = 0; i < n - 1; i++) {
+//        for (int j = 0; j < n - i - 1; j++) {
+//            if (arr[j] > arr[j + 1]) {
+//                int temp = arr[j];
+//                arr[j] = arr[j + 1];
+//                arr[j + 1] = temp;
+//            }
+//        }
+//    }
+//}
+//
+//void printArray(int arr[], int n) {
+//    for (int i = 0; i < n; i++) {
+//        cout << arr[i] << " ";
+//    }
+//    cout << endl;
+//}
+//
+//int main() {
+//    int n;
+//    cout << "Enter the number of elements: ";
+//    cin >> n;
+//    int* arr = new int[n];
+//    cout << "Enter the elements: ";
+//    for (int i = 0; i < n; i++) {
+//        cin >> arr[i];
+//    }
+//
+//    bubbleSort(arr, n);
+//
+//    cout << "Sorted array: ";
+//    printArray(arr, n);
+//
+//    delete[] arr;
+//    return 0;
+//}
+
+
+/*Program for searching an element in an array using linear search*/
+
+
+//// Function to perform Linear Search
+//int linearSearch(int arr[], int n, int x) {
+//    for (int i = 0; i < n; i++) {
+//        if (arr[i] == x) {
+//            return i; // Return the index if the element is found
+//        }
+//    }
+//    return -1; // Return -1 if the element is not found
+//}
+//
+//int main() {
+//    int n, x;
+//    cout << "Enter the number of elements: ";
+//    cin >> n;
+//    int* arr = new int[n];
+//    cout << "Enter the elements: ";
+//    for (int i = 0; i < n; i++) {
+//        cin >> arr[i];
+//    }
+//    cout << "Enter the element to search for: ";
+//    cin >> x;
+//
+//    int result = linearSearch(arr, n, x);
+//    if (result != -1) {
+//        cout << "Element found at index " << result << endl;
+//    }
+//    else {
+//        cout << "Element not found" << endl;
+//    }
+//
+//    delete[] arr;
+//    return 0;
+//}
+
+
+/*Program that searches for a number in an array using Binary search*/
+
+
+//// Function to perform Binary Search
+//int binarySearch(int arr[], int n, int x) {
+//    int left = 0, right = n - 1;
+//    while (left <= right) {
+//        int mid = left + (right - left) / 2;
+//
+//        // Check if x is present at mid
+//        if (arr[mid] == x) {
+//            return mid;
+//        }
+//
+//        // If x is greater, ignore the left half
+//        if (arr[mid] < x) {
+//            left = mid + 1;
+//        }
+//        // If x is smaller, ignore the right half
+//        else {
+//            right = mid - 1;
+//        }
+//    }
+//    // If the element is not present in the array
+//    return -1;
+//}
+//
+//int main() {
+//    int n, x;
+//    cout << "Enter the number of elements: ";
+//    cin >> n;
+//    int* arr = new int[n];
+//    cout << "Enter the sorted elements: ";
+//    for (int i = 0; i < n; i++) {
+//        cin >> arr[i];
+//    }
+//    cout << "Enter the element to search for: ";
+//    cin >> x;
+//
+//    int result = binarySearch(arr, n, x);
+//    if (result != -1) {
+//        cout << "Element found at index " << result << endl;
+//    }
+//    else {
+//        cout << "Element not found" << endl;
+//    }
+//
+//    delete[] arr;
+//    return 0;
+//}
+
+
+/*Program that counts the number of vowels and consonants in a string (char type array) */
+
+
+//// Function to count vowels and consonants in a character array
+//void countVowelsAndConsonants(const char str[], int& vowels, int& consonants) {
+//    vowels = 0;
+//    consonants = 0;
+//    for (int i = 0; str[i] != '\0'; i++) {
+//        char ch = str[i];
+//        if (isalpha(ch)) { // Check if the character is an alphabet
+//            ch = tolower(ch); // Convert to lowercase for uniformity
+//            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+//                vowels++;
+//            }
+//            else {
+//                consonants++;
+//            }
+//        }
+//    }
+//}
+//
+//int main() {
+//    char input[100];
+//    cout << "Enter a string: ";
+//    cin.getline(input, 100); // Use cin.getline to allow spaces in the input
+//    int vowels, consonants;
+//    countVowelsAndConsonants(input, vowels, consonants);
+//    cout << "Number of vowels: " << vowels << endl;
+//    cout << "Number of consonants: " << consonants << endl;
 //    return 0;
 //}
